@@ -25,10 +25,10 @@
 <hr>
 
 <ul>
-  <%= @list_of_boards.each do |a_board| %>
+  <% @list_of_boards.each do |a_board| %>
     <li>
-     <%= a_board.name %>
+     <a href="/boards/<%= a_board.id %>"><%= a_board.name %></a>
     </li>
-    <%= end %>
+    <% end %>
 </ul>
   
