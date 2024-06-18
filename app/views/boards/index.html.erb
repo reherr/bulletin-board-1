@@ -1,14 +1,14 @@
-<div>
-  <div>
+
+ 
     <h1>
-      List of all boards
+      All boards
     </h1>
-  </div>
-</div>
+
+
 
 <hr>
 
-<div>
+
   <div>
     <h2>
       Add a new board
@@ -24,16 +24,22 @@
       </div>
 
       <button>
-        Create board
+        Add board
       </button>
     </form>
   </div>
-</div>
+
 
 <hr>
-<div>
-  <div>
-    <table border="1">
+
+  <ul>
+  <%= @list_of_boards.each do |a_board| %>
+    <li>
+     <%= a_board.name %>
+    </li>
+    <%= end %>
+</ul>
+   <!-- <table border="1">
       <tr>
         <th>
           ID
@@ -55,32 +61,28 @@
         </th>
       </tr>
 
-      <% @list_of_boards.each do |a_board| %>
-      <tr>
+      <%# @list_of_boards.each do |a_board| %>-->
+<!--      <tr>
         <td>
-          <%= a_board.id %>
-        </td>
+          <%#= a_board.id %>-->
+<!--        </td>
 
         <td>
-          <%= a_board.name %>
-        </td>
+          <%#= a_board.name %>-->
+<!--        </td>
 
         <td>
-          <%= time_ago_in_words(a_board.created_at) %> ago
-        </td>
+          <%#= time_ago_in_words(a_board.created_at) %> ago-->
+<!--        </td>
         <td>
-          <%= time_ago_in_words(a_board.updated_at) %> ago
-        </td>
+          <%#= time_ago_in_words(a_board.updated_at) %> ago-->
+<!--        </td>
 
         <td>
-          <a href="/boards/<%= a_board.id %>">
+          <a href="/boards/<%#= a_board.id %>">
             Show details
           </a>
         </td>
       </tr>
-      <% end %>
-    </table>
-  </div>
-</div>
-
-<hr>
+      <%# end %>-->
+<!--    </table>-->
